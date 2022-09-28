@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/assets/image/hand.png" type="image/x-icon" />
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Know Me</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header class=" fixed lg:px-40  bg-transparent top-0  w-full flex items-center z-10 h-12">
+      <div class="container mx-auto">
+        <div class="flex items-center justify-between  relative" id="navbar">
+          <input type="checkbox" id="check" class="absolute w-[55px] h-[40px] right-1 z-20 opacity-0 lg:hidden"/>
+          <div class="px-4">
+            <a href="#home" class=""><h4 class="flex text-lg font-semibold"><img src="/assets//image/hand.png" alt="knowme-logo" srcset="" width="30" height="30">Know Me</h4></a>
+          </div>
+          <div class="flex items-center px-4 " id="menu-toogle">
+            <div class="block absolute right-4 lg:hidden" id="frech-menu">
+            <span class="block w-[28px] h-[3px] bg-slate-900 rounded-md my-1"></span>
+            <span class="block w-[28px] h-[3px] bg-sky-400  rounded-md my-1 -translate-x-2"></span>
+            <span class="block w-[28px] h-[3px] bg-slate-900 rounded-md my-1" ></span>
+            </div>
+            <nav id="nav-menu" class=" absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+              <ul class="block lg:flex xl:flex">
+                <li class="group">
+                  <a  class="text-slate-900 py-2 mx-8 flex group-hover:text-sky-400 active:text-sky-400" href="#home">Home</a>
+                </li>
+                <li class="group">
+                  <a  class="text-slate-900 py-2 mx-8 flex group-hover:text-sky-400 active:text-sky-400" href="#education">Education</a>
+                </li>
+                <li class="group">
+                  <a class="text-slate-900 py-2 mx-8 flex group-hover:text-sky-400 active:text-sky-400" href="#skills">My Skills</a>
+                </li>
+                <li class="group">
+                  <a class="text-slate-900 py-2 mx-8 flex group-hover:text-sky-400 active:text-sky-400" href="#portofolio">Portofolio</a>
+                </li>
+                <li class="group">
+                  <a class="text-slate-900 py-2 mx-8 flex group-hover:text-sky-400 active:text-sky-400" href="#contact">Contact Me</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          
+        </div>
+      </div>
+      
+    </header>
+
+
+    <!-- Header End -->
+
+    <!-- Hero Section -->
+    <section id="home" class="flex items-center min-h-screen justify-center">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap xl:flex-row-reverse md:flex-row-reverse lg:flex-row-reverse">
+          <div id="profile-picture" class="w-full self-end px-4 lg:w-1/2 md:w-1/2">
+            <div class="relative mt-10 lg:mt-9 lg:right-0">
+              <img width="400" height="400" src="/assets/image/my-profile.png" alt="profile-picture" srcset="" class="max-w-full mx-auto" />
+              <span id="shape" class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2 -translate-y-[-5rem]">
+                <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill="#38BDF8"
+                    d="M29.5,-34.5C40.1,-26.2,52,-18.7,60.5,-5.5C69,7.8,74.2,26.8,68.8,43C63.4,59.3,47.4,72.7,31.4,72.4C15.5,72.2,-0.3,58.2,-19,51.6C-37.7,45.1,-59.3,45.9,-69.2,36.3C-79.1,26.7,-77.3,6.7,-70.2,-8.7C-63.1,-24.1,-50.7,-34.8,-38.1,-42.8C-25.5,-50.8,-12.7,-56.1,-1.7,-54.1C9.4,-52.1,18.8,-42.9,29.5,-34.5Z"
+                    transform="translate(100 100) scale(1.2)"
+                  />
+                </svg>
+              </span>
+            </div>
+          </div>
+          <div id="home-content" class="w-full self-center px-4 sm:py-8 md:w-1/2 lg:w-1/2 lg:pl-40">
+            <h1 id="name" class="text-base font-semibold text-sky-400 md:text-xl">Hello Everyone👋, I am <span class="block font-bold text-slate-900 text-4xl ">Mochamad Syahrul Akbar</span></h1>
+            <h2 class="font-medium text-slate-500 text-lg mb-5 lg:text-2xl">Student |<span class="text-slate-900"> Junior Front End Web</span></h2>
+            <p class="font-medium text-slate-400 mb-10 leading-relaxed">I am a student majoring in computer engineering, interested in the field of front end web developer who is very passionated about improving my coding skills.</p>
+            <a href="https://github.com/syahrulakbar/myPortofolio-website/raw/main/assets/curriculum-vitae.pdf" class=" bg-sky-400 font-semibold text-white py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero Section -->
+
+    <!-- Section Education -->
+    <section id="education" class="min-h-max mt-20 bg-slate-100 pb-20 ">
+        <div class="container mx-auto">
+            <h1 class="text-center font-bold text-3xl pt-[1.5em]">🎓Education</h1>
+            <div class="education-section flex justify-center items-center h-full pt-20 ">
+                <div id="education-content1" class="education-content">
+                    <!-- Edukasi data 1 -->
+                    <div class="education-data grid gap-6">
+                        <div >
+                            <h2 class="education-title font-semibold text-lg">Computer Engineering</h2>
+                            <h2 class="education-subtitle inline-block mb-2">Amikom Purwokerto University</h2>
+                            <p class="education-calender font-medium text-slate-400">📆 2020 - Now</p>
+                        </div>
+                        <div>
+                            <span class="education-rounder bg-sky-400"></span>
+                            <span class="education-line block w-[2px] h-full bg-sky-400"></span>
+                        </div>
+                    </div>
+                    <!-- Education data 2 -->
+                    <div class="education-data grid gap-6">
+                        <div></div>
+                        <div>
+                            <span class="education-rounder bg-sky-400"></span>
+                            <span class="education-line block w-[2px] h-full bg-sky-400"></span>
+                        </div>
+                        <div>
+                            <h2 id="education-title2" class="education-title font-semibold text-lg">Audio-Video Engineering</h2>
+                            <h2 class="education-subtitle inline-block mb-2">SMK 2 Purwokerto</h2>
+                            <p class="education-calender font-medium text-slate-400">📆 2017 - 2020</p>
+                        </div>
+                    </div>
+                    <div class="education-data grid gap-6">
+                        <div >
+                            <h2 class="education-title font-semibold text-lg">Mts Maarif Sokaraja</h4>
+                            <p class="education-calender font-medium text-slate-400">📆 2014 - 2017</p>
+
+                        </div>
+                        <div>
+                            <span class="education-rounder bg-sky-400"></span>
+                            <span class="education-line block w-[2px] h-full bg-sky-400"></span>
+                        </div>
+                    </div>
+                    <!-- Education data 2 -->
+                    <div class="education-data grid gap-6">
+                        <div></div>
+                        <div>
+                            <span class="education-rounder bg-sky-400"></span>
+                        </div>
+                        <div>
+                            <h2 id="education-title2" class="education-title font-semibold text-lg">SD N 1 Pamijen</h2>
+                            <p class="education-calender font-medium text-slate-400">📆 2008 - 2014</p>
+
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+           
+        </div>
+    </section>
+    <!-- End Section Education -->
+
+    <!-- Skills Section -->
+    <section class="skills min-h-screen mt-20" id="skills">
+      <h1 class="sub-judul text-center text-3xl font-bold">📝 My Skills</h1>
+      <div id="container-skills" class="skills-content grid p-10 gap-10 lg:grid-cols-3 lg:grid-rows-2 justify-items-center md:grid-cols-3  sm:grid-rows-3 sm:grid-cols-2">
+        <div class="html box p-5 rounded-xl shadow-xl shadow-slate-500 hover:scale-110 hover:shadow-amber-600 transition ease-in-out duration-300"">
+          <img src="/assets/image/html.png" alt="html-logo" srcset="" />
+          <h4 class="text-center font-semibold text-lg">HTML 5</h4>
+        </div>
+        <div class="css box p-5 rounded-xl shadow-xl shadow-slate-500 hover:scale-110 hover:shadow-sky-400 transition ease-in-out duration-300">
+          <img src="/assets/image/css.png" alt="css-logo" srcset="" />
+          <h4 class="text-center font-semibold text-lg">CSS 3</h4>
+        </div>
+        <div class="js box p-5 rounded-xl shadow-xl shadow-slate-500 hover:scale-110 hover:shadow-yellow-400 transition ease-in-out duration-300"">
+          <img src="/assets/image/js.png" alt="js-logo" srcset="" />
+          <h4 class="text-center font-semibold text-lg">JavaScript</h4>
+        </div>
+        <div class="github box p-5 rounded-xl shadow-xl shadow-slate-500 hover:scale-110 hover:shadow-slate-900 transition ease-in-out duration-300"">
+          <img src="/assets/image/github.png" alt="github-logo" srcset="" />
+          <h4 class="text-center font-semibold text-lg">Github</h4>
+        </div>
+        <div class="bootstrap box p-5 rounded-xl shadow-xl shadow-slate-500 hover:scale-110 hover:shadow-purple-700 transition ease-in-out duration-300"">
+          <img src="/assets/image/bootstrap.png" alt="bootstrap-logo" srcset="" />
+          <h4 class="text-center font-semibold text-lg">Bootstrap</h4>
+        </div>
+        <div class="tailwind box p-5 rounded-xl shadow-xl shadow-slate-500 hover:scale-110 hover:shadow-cyan-700 transition ease-in-out duration-300"">
+          <img src="/assets/image/tailwind.png" alt="tailwind-logo" srcset="" />
+          <h4 class="text-center font-semibold text-lg">Tailwind</h4>
+        </div>
+      </div>
+    </section>
+    <!-- Skills Ends -->
+
+    <!-- Project Section -->
+    <section id="portofolio" class="min-h-screen mt-[2em] bg-gradient-to-r from-sky-400 to-sky-300 bg-opacity-80 pb-[2em]">
+      <h1 class="sub-judul text-center text-3xl font-bold mb-10 pt-[1.5em]">📚 Portofolio</h1>
+      <div class="container mx-auto px-10">
+        <div id="project-content" class="grid lg:grid-cols-3 lg:grid-rows-4 gap-10 sm:grid-cols-2 sm:grid-rows-6 ">
+            <div class="rounded-lg shadow-xl bg-white h-min ">
+                <img class="h-1/2 w-full rounded-lg" src="/assets/image/ontime.jpg" alt="">
+                <h2 class="text-center font-semibold text-black text-lg mt-1">Ontime App</h2>
+                <p class="px-3 mb-5">The todolist application, is now available on the Google Play Store</p>
+                <div class="flex justify-center">
+                    <a href="https://ontimeapp.netlify.app/" target="_blank" class=" mx-8 mb-8 px-8 py-2 bg-sky-400 rounded-xl hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out hover:text-white font-semibold">View Project</a>
+                </div>
+            </div>
+            
+            <div class="rounded-lg shadow-xl bg-white h-min">
+                <img class="h-1/2 w-full rounded-t-lg" src="/assets/image/bookshelf.png" alt="">
+                <h2 class="text-center font-semibold text-black text-lg mt-1">Bookshelf Web</h2>
+                <p class="px-3 mb-5">Web to record books that have been read and unread, using local storage for storage</p>
+                <div class="flex justify-center">
+                    <a href="https://bookshelf-apps-dicoding.netlify.app/" target="_blank" class=" mx-8 mb-8 px-8 py-2 bg-sky-400 rounded-xl hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out hover:text-white font-semibold">View Project</a>
+                </div>
+            </div>
+            
+            <div class="rounded-lg shadow-xl bg-white h-min">
+                <img class="h-1/2 rounded-t-lg" src="/assets/image/netflix.jpg" alt="">
+                <h2 class="text-center font-semibold text-black text-lg mt-1">Netflix</h2>
+                <p class="px-3 mb-5">Netflix is a streaming service that offers a wide variety of movies.</p>
+                <div class="flex justify-center">
+                    <a href="https://www.netflix.com/" target="_blank" class=" mx-8 mb-8 px-8 py-2 bg-sky-400 rounded-xl hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out hover:text-white font-semibold">View Project</a>
+                </div>
+            </div>
+            
+            <div class="rounded-lg shadow-xl bg-white h-min">
+                <img class="h-1/2 w-full rounded-t-lg" src="/assets/image/spotify.jpg" alt="">
+                <h2 class="text-center font-semibold text-black text-lg mt-1">Spotify</h2>
+                <p class="px-3 mb-5">Music player application, there are various interesting features available, for android and ios.</p>
+                <div class="flex justify-center">
+                    <a href="https://open.spotify.com/" target="_blank" class=" mx-8 mb-8 px-8 py-2 bg-sky-400 rounded-xl hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out hover:text-white font-semibold">View Project</a>
+                </div>
+            </div>
+            
+            <div class="rounded-lg shadow-xl bg-white h-min">
+                <img class="h-1/2 w-full rounded-t-lg" src="/assets/image/resso.jpg" alt="">
+                <h2 class="text-center font-semibold text-black text-lg mt-1">Resso</h2>
+                <p class="px-3 mb-5">Resso is Music player application, there are various interesting features available, for android and ios.</p>
+                <div class="flex justify-center">
+                    <a href="https://www.resso.com/" target="_blank" class=" mx-8 mb-8 px-8 py-2 bg-sky-400 rounded-xl hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out hover:text-white font-semibold">View Project</a>
+                </div>
+            </div>
+            
+            <div class="rounded-lg shadow-xl bg-white h-min">
+                <img class="h-1/2 w-full rounded-t-lg" src="/assets/image/pegi.jpg" alt="pegi-image">
+                <h2 class="text-center font-semibold text-black text-lg mt-1">Pegi-Pegi</h2>
+                <p class="px-3 mb-5">booking hotels and flights anywhere and anytime, available on google play store and app store</p>
+                <div class="flex justify-center">
+                    <a href="https://www.pegipegi.com/" target="_blank" class=" mx-8 mb-8 px-8 py-2 bg-sky-400 rounded-xl hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out hover:text-white font-semibold">View Project</a>
+                </div>
+            </div>
+            
+            <div class="rounded-lg shadow-xl bg-white h-min">
+                <img class="h-1/2 w-full rounded-t-lg" src="/assets/image/iqyi.jpg" alt="iqti-image">
+                <h2 class="text-center font-semibold text-black text-lg mt-1">iQIYI</h2>
+                <p class="px-3 mb-5">iQIYI is an HD quality, high speed and free video streaming application.</p>
+                <div class="flex justify-center">
+                    <a href="https://www.iq.com/?lang=id_id" target="_blank" class=" mx-8 mb-8 px-8 py-2 bg-sky-400 rounded-xl hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out hover:text-white font-semibold">View Project</a>
+                </div>
+            </div>
+            
+            <div class="rounded-lg shadow-xl bg-white h-min">
+                <img class="h-1/2 w-full rounded-t-lg" src="/assets/image/telegram.jpg" alt="telegram-image">
+                <h2 class="text-center font-semibold text-black text-lg mt-1">Telegram</h2>
+                <p class="px-3 mb-5">Telegram instant messenger app, available on google play store and app store</p>
+                <div class="flex justify-center">
+                    <a href="https://play.google.com/store/apps/details?id=org.telegram.messenger" target="_blank" class=" mx-8 mb-8 px-8 py-2 bg-sky-400 rounded-xl hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out hover:text-white font-semibold">View Project</a>
+                </div>
+            </div>
+            
+            <div class="rounded-lg shadow-xl bg-white h-min">
+                <img class="h-1/2 w-full rounded-t-lg" src="/assets/image/mycake.jpg" alt="">
+                <h2 class="text-center font-semibold text-black text-lg mt-1">Cake-Learn Language</h2>
+                <p class="px-3 mb-5">learn various languages ​​with fun, live chat feature available, available on google play store and ios</p>
+                <div class="flex justify-center">
+                    <a href="https://play.google.com/store/apps/details?id=me.mycake" target="_blank" class=" mx-8 mb-8 px-8 py-2 bg-sky-400 rounded-xl hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out hover:text-white font-semibold">View Project</a>
+                </div>
+            </div>
+            
+            <div class="rounded-lg shadow-xl bg-white h-min">
+                <img class="h-1/2 w-full rounded-t-lg" src="/assets/image/gotube.jpg" alt="">
+                <h2 class="text-center font-semibold text-black text-lg mt-1">Gotube</h2>
+                <p class="px-3 mb-5">Gotube is an HD quality, high speed and free video streaming application.</p>
+                <div class="flex justify-center">
+                    <a href="https://play.google.com/store/apps/details?id=premium.gotube.adblock.utube" target="_blank" class=" mx-8 mb-8 px-8 py-2 bg-sky-400 rounded-xl hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out hover:text-white font-semibold">View Project</a>
+                </div>
+            </div>
+            
+            <div class="rounded-lg shadow-xl bg-white h-min">
+                <img class="h-1/2 w-full rounded-t-lg" src="/assets/image/canva.jpg" alt="">
+                <h2 class="text-center font-semibold text-black text-lg mt-1">Canva</h2>
+                <p class="px-3 mb-5">Canva Photo and video design tools, there are a variety of ready-to-use templates. </p>
+                <div class="flex justify-center">
+                    <a href="https://www.canva.com/" target="_blank" class=" mx-8 mb-8 px-8 py-2 bg-sky-400 rounded-xl hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out hover:text-white font-semibold">View Project</a>
+                </div>
+            </div>
+            
+            <div class="rounded-lg shadow-xl bg-white h-min ">
+                <img  class="h-1/2 w-full rounded-t-lg" src="/assets/image/hbo.jpg" alt="">
+                <h2 class="text-center font-semibold text-black text-lg mt-1">HBO</h2>
+                <p class="px-3 mb-5">HBO is a streaming service that offers a wide variety of movies.</p>
+                <div class="flex justify-center">
+                    <a href="https://play.google.com/store/apps/details?id=sg.hbo.hbogo" target="_blank" class=" mx-8 mb-8 px-8 py-2 bg-sky-400 rounded-xl hover:shadow-lg hover:scale-105 transition duration-300 ease-in-out hover:text-white font-semibold">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- End Project Section -->
+
+    <!-- Section Contact -->
+    <section id="contact" class="min-h-screen pb-32 mt-[5em] ">
+      <div class="container mx-auto">
+        <h1 class="sub-judul text-center text-3xl font-bold mb-10">📞Contact Me</h1>
+        <form action="mailto:07tav2akbar@gmail.com" class="text-base">
+          <div class="w-full lg:w-2/3 lg:mx-auto">
+            <div class="w-full px-4 mb-8">
+              <label for="name" class="text-sky-400 font-bold">Name</label>
+              <input required  type="text" id="name" class="w-full bg-slate-200 text-slate-900 p-3 rounded-md focus:outline-none focus:ring-sky-400">
+            </div>
+            <div class="w-full px-4 mb-8">
+              <label for="email" class="text-sky-400 font-bold">E-mail</label>
+              <input required  type="email" id="email" class="w-full bg-slate-200 text-slate-900 p-3 rounded-md focus:outline-none focus:ring-sky-400">
+            </div>
+            <div class="w-full px-4 mb-8">
+              <label for="message" class="text-sky-400 font-bold">Message</label>
+              <textarea required  name="message" id="message" cols="30" rows="5" class="w-full bg-slate-200 text-slate-900 p-3 rounded-md focus:outline-none focus:ring-sky-400"></textarea>
+            </div>
+            <div class="w-full px-4 mb-8 items-center justify-center">
+              <button type="submit" class="bg-sky-400 text-white py-3 px-8 font-semibold w-max rounded-full sm:w-full hover:opacity-80 hover:shadow-lg duration-500 transition">Send Message</button>   
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- End Contact -->
+
+    <!-- Section Footer -->
+    <footer class="bg-slate-900 pb-12 pt-24">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-2/3 ">
+            <h4 class="font-bold text-2xl text-white mb-5">👋Know Me</h4>
+            <h5 class="mb-2 font-bold text-lg text-white">Contact Me</h5>
+            <p>07tav2akbar@gmail.com</p>
+            <p >Purwokerto, Banyumas, Central Java</p>
+          </div>
+          <div class="w-full px-4 mb-12 md:w-1/3 justify-end">
+            <h5 class="font-semibold text-white mb-5"> Category</h5>
+            <ul class="text-slate-300">
+              <li><a href="#home" class="mb-3 inline-block hover:text-sky-400">Home</a></li>
+              <li><a href="#education" class="mb-3 inline-block hover:text-sky-400">Education</a></li>
+              <li><a href="#skills" class="mb-3 inline-block hover:text-sky-400">My Skills</a></li>
+              <li><a href="#portofolio" class="mb-3 inline-block hover:text-sky-400">Portofolio</a></li>
+              <li><a href="#contact" class="mb-3 inline-block hover:text-sky-400">Contact Me</a></li>
+            </ul>
+          </div>
+         
+        </div>
+        <div class="w-full border-t border-slate-700 pt-10 ">
+           <div class="flex items-center justify-center mb-5 ">
+            <!-- Github -->
+            <a href="https://github.com/syahrulakbar" target="_blank" class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-300 border-slate-300 hover:border-sky-400 hover:bg-sky-400 hover:text-white"> <svg class="fill-current" width="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+            <!-- Email -->
+            <a href="mailto:07tav2akbar@gmail.com" target="_blank" class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-300 border-slate-300 hover:border-sky-400 hover:bg-sky-400 hover:text-white"><svg class="fill-current" width="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg></a>
+            <!-- Linkedin -->
+            <a href="https://www.linkedin.com/in/mochamad-syahrul-akbar-904409225/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-300 border-slate-300 hover:border-sky-400 hover:bg-sky-400 hover:text-white"><svg class="fill-current" width="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/sepatukuhitamkotor/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-300 border-slate-300 hover:border-sky-400 hover:bg-sky-400 hover:text-white"><svg class="fill-current" width="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg></a>
+           </div>
+           <p class=" text-center font-medium text-sm text-slate-400">Made with <span class="text-pink-500">❤️</span> by <a href="https://www.instagram.com/sepatukuhitamkotor/" class="font-bold text-sky-400">Mochamad Syahrul Akbar</a> with <a href="https://tailwindcss.com/" target="_blank" class="font-bold text-sky-500"> Tailwind CSS.</a></p>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+  </body>
+</html>
