@@ -1,0 +1,185 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+div#button button {
+  border-top: 1px solid transparent;
+  transition: 0.5s;
+}
+div#button button:hover,
+div#button button:active {
+  border-top: 1px solid #000;
+}
+div#button button.active {
+  transition: 0.5s;
+  border-top: 1px solid #000;
+}
+div.card {
+  transition: 1s;
+}
+
+div.card:hover > div#project-title,
+div.card:hover > div#certificate-title {
+  bottom: 0;
+  transition: 0.5s;
+}
+
+div.image-profile img {
+  animation: spin 5s linear 2;
+}
+div.image-profile div {
+  background-color: #000;
+  width: 40%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+}
+div[data-tilt] {
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  transition: all 0.3s;
+}
+div[data-tilt] div {
+  transform: translateZ(20px);
+}
+.education-data {
+  grid-template-columns: 1fr max-content 1fr;
+}
+.education-rounder {
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  border-radius: 50%;
+}
+.education-line {
+  transform: translate(6px, -7px);
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+div#button button i {
+  display: none;
+}
+
+@media screen and (max-width: 1130px) {
+  div#button button i {
+    display: block;
+  }
+  div#button button span {
+    display: none;
+  }
+  div#contact-logo {
+    justify-content: center;
+  }
+  div#head-profile {
+    flex-wrap: wrap;
+  }
+  div#profile-image {
+    width: 100%;
+  }
+  div#profile-image div {
+    justify-content: center;
+  }
+  div#profile-desc {
+    width: 95%;
+    margin: 40px;
+  }
+  div#profile-desc h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  div#profile-desc h2#status {
+    text-align: center;
+  }
+  div#profile-desc p {
+    text-align: justify;
+  }
+  /* Button */
+  span.on {
+    display: none;
+  }
+  div#project-content,
+  div#skills-content,
+  div#certificate-content {
+    grid-template-columns: auto auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  div#head-profile {
+    flex-wrap: wrap;
+  }
+  div#profile-image {
+    width: 100%;
+  }
+  div#profile-image div {
+    justify-content: center;
+  }
+  div#profile-desc {
+    width: 100%;
+    margin: 0;
+  }
+  div#profile-desc h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  div#profile-desc h2#status {
+    text-align: center;
+  }
+  div#profile-desc p {
+    text-align: justify;
+  }
+  /* Button */
+  span.on {
+    display: none;
+  }
+
+  /* Skills */
+
+  /* Project */
+  div#project-content,
+  div#skills-content,
+  div#certificate-content {
+    grid-template-columns: auto;
+  }
+  div#project-img-1 {
+    width: max-content;
+    min-height: max-content;
+  }
+
+  div#experience {
+    padding: 0;
+  }
+  div.education-data {
+    grid-template-columns: auto;
+    gap: 0;
+    /* display: block; */
+    margin-bottom: 2em;
+  }
+  .education-rounder {
+    display: none;
+  }
+  .education-line {
+    display: none;
+  }
+
+  div#contact-logo {
+    justify-content: center;
+  }
+  div#button button {
+    width: 25%;
+    margin: 0;
+  }
+  div#button-container {
+    width: 100%;
+  }
+}

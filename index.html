@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="This is my portofolio website" />
-    <title>👋Know Me</title>
+    <title>Know Me</title>
     <!-- Fav Icon -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/image/hand.png" type="image/x-icon" />
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;&display=swap" rel="stylesheet" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- My CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -22,24 +22,25 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <section id="container-all" class="container flex mx-auto justify-center min-h-screen">
       <div id="container-content" class="container justify-center flex w-[80%] mx-auto">
         <div id="container-content-1" class="w-full m-10">
-          <div id="head-profile" class="flex w-full lg:grid-rows-1">
-            <div class="w-[30%] mx-4">
+          <div id="head-profile" class="flex w-full lg:grid-rows-1 relative">
+            <div id="particles-js" class="w-[100%] h-[100%] absolute top-0 left-0 -z-20"></div>
+            <div id="profile-image" class="w-[30%] mx-4">
               <div class="relative image-profile flex justify-end">
-                <div></div>
                 <img src="/assets/image/my-profile.png" alt="" srcset="" class="rounded-full w-[40%]" />
               </div>
             </div>
-            <div class="w-[70%]">
+            <div id="profile-desc" class="w-[70%]">
               <div class="desc-profile">
                 <h1 class="text-3xl font-medium">Mochamad Syahrul Akbar</h1>
-                <h2 class="font-light">Student | <span class="font-normal">Junior Front-End</span></h2>
+                <h2 id="status" class="font-light">Student | <span class="font-normal">Junior Front-End</span></h2>
                 <div class="w-full pt-2">
-                  <div class="flex mb-5">
+                  <div id="contact-logo" class="flex mb-5">
                     <!-- Github -->
                     <a href="https://github.com/syahrulakbar" target="_blank" class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-900 border-slate-300 hover:border-sky-400 hover:bg-sky-400 hover:text-white">
                       <svg class="fill-current" width="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -109,14 +110,14 @@
               </div>
             </div>
           </div>
-          <section id="main-profile" class="min-h-screen">
+          <section id="main-profile" class="">
             <div id="main-button" class="flex justify-center mt-10">
-              <div class="flex justify-center border-t w-[90%] border-slate-800">
-                <div id="button" class="">
-                  <button id="button-experience" class="mx-5 active">Experience</button>
-                  <button id="button-project" class="mx-5">My Project</button>
-                  <button id="button-skills" class="mx-5">My Skills</button>
-                  <button id="button-certificate" class="mx-5">Certificate</button>
+              <div id="button-container" class="flex justify-center border-t w-[100%] border-slate-800">
+                <div id="button" class="flex w-full justify-center">
+                  <button id="button-experience" class="mr-2 active border-slate-800 w-[20%]"><i class="mt-2 fa-solid fa-code"></i><span class="on">Experience</span></button>
+                  <button id="button-project" class="mr-2 border-slate-800 w-[20%]"><i class="mt-2 fa-solid fa-laptop"></i><span class="on">My Project</span></button>
+                  <button id="button-skills" class="mr-2 border-slate-800 w-[20%]"><i class="mt-2 fa-sharp fa-solid fa-book"></i><span class="on">My Skills</span></button>
+                  <button id="button-certificate" class="mr-2 border-slate-800 w-[20%]"><i class="mt-2 fa-solid fa-newspaper"></i><span class="on">Certificate</span></button>
                 </div>
               </div>
             </div>
@@ -131,7 +132,9 @@
                       <h2 class="text-center font-semibold text-black text-md mt-1">Learn Basic Front-End</h2>
                       <p class="px-3 font-light text-center">Dicoding Academy</p>
                       <div class="w-full flex justify-center">
-                        <a class="w-[50%] rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="#" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-eye mr-1"></i> View </a>
+                        <a class="w-40 rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="https://www.dicoding.com/certificates/N9ZO7LY76ZG5" target="_blank" rel="noopener noreferrer">
+                          <i class="fa-solid fa-eye mr-1"></i> View
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -143,55 +146,70 @@
                       <h2 class="text-center font-semibold text-black text-md mt-1">Learn to Create Front-End Web for Beginners</h2>
                       <p class="px-3 font-light text-center">Dicoding Academy</p>
                       <div class="w-full flex justify-center">
-                        <a class="w-[50%] rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="#" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-eye mr-1"></i> View </a>
+                        <a class="w-40 rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="https://www.dicoding.com/certificates/1OP86OG01XQK" target="_blank" rel="noopener noreferrer">
+                          <i class="fa-solid fa-eye mr-1"></i> View
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="card relative rounded-lg shadow-xl bg-white h-min overflow-hidden">
-                  <img id="certificate-img-1" class="h-1/2 w-full rounded-t-lg" src="/assets/image/dicoding-1.png" alt="" />
+                  <img id="certificate-img-1" class="h-1/2 w-full rounded-t-lg" src="/assets/image/certi-solid.png" alt="" />
                   <div id="certificate-title" class="absolute w-full h-full bottom-[-100%] left-0 bg-gradient-to-t from-sky-400 flex flex-wrap justify-center items-center duration-500 transition-all ease-in-out">
                     <div>
                       <h2 class="text-center font-semibold text-black text-md mt-1">Learn SOLID Programming Principles</h2>
                       <p class="px-3 font-light text-center">Dicoding Academy</p>
                       <div class="w-full flex justify-center">
-                        <a class="w-[50%] rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="#" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-eye mr-1"></i> View </a>
+                        <a class="w-40 rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="https://www.dicoding.com/certificates/ERZRM63KWPYV" target="_blank" rel="noopener noreferrer">
+                          <i class="fa-solid fa-eye mr-1"></i> View
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="card relative rounded-lg shadow-xl bg-white h-min overflow-hidden">
-                  <img id="certificate-img-1" class="h-1/2 w-full rounded-t-lg" src="/assets/image/dicoding-1.png" alt="" />
+                  <img id="certificate-img-1" class="h-1/2 w-full rounded-t-lg" src="/assets/image/certi-c.png" alt="" />
                   <div id="certificate-title" class="absolute w-full h-full bottom-[-100%] left-0 bg-gradient-to-t from-sky-400 flex flex-wrap justify-center items-center duration-500 transition-all ease-in-out">
                     <div>
                       <h2 class="text-center font-semibold text-black text-md mt-1">Getting Started Programming With C</h2>
                       <p class="px-3 font-light text-center">Dicoding Academy</p>
                       <div class="w-full flex justify-center">
-                        <a class="w-[50%] rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="#" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-eye mr-1"></i> View </a>
+                        <a class="w-40 rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="https://www.dicoding.com/certificates/72ZDOLG7JXYW" target="_blank" rel="noopener noreferrer">
+                          <i class="fa-solid fa-eye mr-1"></i> View
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="card relative rounded-lg shadow-xl bg-white h-min overflow-hidden">
-                  <img id="certificate-img-1" class="h-1/2 w-full rounded-t-lg" src="/assets/image/dicoding-1.png" alt="" />
+                  <img id="certificate-img-1" class="h-1/2 w-full rounded-t-lg" src="/assets/image/certi-java.png" alt="" />
                   <div id="certificate-title" class="absolute w-full h-full bottom-[-100%] left-0 bg-gradient-to-t from-sky-400 flex flex-wrap justify-center items-center duration-500 transition-all ease-in-out">
                     <div>
                       <h2 class="text-center font-semibold text-black text-md mt-1">Getting Started Programming With Java</h2>
                       <p class="px-3 font-light text-center">Dicoding Academy</p>
                       <div class="w-full flex justify-center">
-                        <a class="w-[50%] rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="#" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-eye mr-1"></i> View </a>
+                        <a class="w-40 rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="https://www.dicoding.com/certificates/1RXYM8G6QXVM" target="_blank" rel="noopener noreferrer">
+                          <i class="fa-solid fa-eye mr-1"></i> View
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="card relative rounded-lg shadow-xl bg-white h-min overflow-hidden">
-                  <img id="certificate-img-1" class="h-1/2 w-full rounded-t-lg" src="/assets/image/dicoding-1.png" alt="" />
-                  <div id="certificate-title" class="absolute w-full h-full bottom-[-100%] left-0 bg-gradient-to-t from-sky-400 flex flex-wrap justify-center items-center duration-500 transition-all ease-in-out">
+                  <img id="certificate-img-1" class="h-1/2 w-full rounded-t-lg" src="/assets/image/udemy.png" alt="" />
+                  <div id="certificate-title" class="absolute w-full h-full bottom-[-100%] left-0 bg-sky-400 bg-opacity-90 flex flex-wrap justify-center items-center duration-500 transition-all ease-in-out">
                     <div>
                       <h2 class="text-center font-semibold text-black text-md mt-1">Learn Web Development Using the PHP Programing Language</h2>
                       <p class="px-3 font-light text-center">Udemy</p>
                       <div class="w-full flex justify-center">
-                        <a class="w-[50%] rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="#" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-eye mr-1"></i> View </a>
+                        <a
+                          class="w-40 rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center"
+                          href="https://www.udemy.com/certificate/UC-f012288c-cfec-4096-b0a2-db44d89292a3/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i class="fa-solid fa-eye mr-1"></i> View
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -201,88 +219,184 @@
             <!--End Certificate  -->
 
             <!--Container Skills -->
-            <div id="skills" class="hidden container mx-auto px-10 mt-10 bg-sky-400">
-              <div id="certificate-content" class="grid grid-cols-3 gap-10">
-                <div class="card relative rounded-lg shadow-xl bg-white h-min overflow-hidden">
-                  <img id="certificate-img-1" class="h-1/2 w-full rounded-t-lg" src="/assets/image/dicoding-1.png" alt="" />
-                  <div id="certificate-title" class="absolute w-full h-full bottom-[-100%] left-0 bg-gradient-to-t from-sky-400 flex flex-wrap justify-center items-center duration-500 transition-all ease-in-out">
+            <div id="skills" class="hidden container mx-auto px-10 mt-10 w-[80%]">
+              <div id="skills-content" class="grid grid-cols-3 gap-10">
+                <div class="card relative shadow-xl rounded-lg bg-white h-min hover:shadow-orange-300" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                  <div class="flex justify-center w-full">
+                    <img id="skills-img-1" class="w-[70%]" src="/assets/image/html.png" alt="" />
+                  </div>
+                  <h2 class="text-center font-semibold text-black text-2xl pb-5">HTML 5</h2>
+                </div>
+                <div class="card relative shadow-xl rounded-lg bg-white h-min hover:shadow-sky-500" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                  <div class="flex justify-center w-full">
+                    <img id="skills-img-1" class="w-[70%]" src="/assets/image/css.png" alt="" />
+                  </div>
+                  <h2 class="text-center font-semibold text-black text-2xl pb-5">CSS 3</h2>
+                </div>
+                <div class="card relative shadow-xl rounded-lg bg-white h-min hover:shadow-yellow-400" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                  <div class="flex justify-center w-full">
+                    <img id="skills-img-1" class="w-[70%]" src="/assets/image/js.png" alt="" />
+                  </div>
+                  <h2 class="text-center font-semibold text-black text-2xl pb-5">JavaScript</h2>
+                </div>
+                <div class="card relative shadow-xl rounded-lg bg-white h-min hover:shadow-indigo-500" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                  <div class="flex justify-center w-full">
+                    <img id="skills-img-1" class="w-[70%]" src="/assets/image/bootstrap.png" alt="" />
+                  </div>
+                  <h2 class="text-center font-semibold text-black text-2xl pb-5">Bootstrap</h2>
+                </div>
+                <div class="card relative shadow-xl rounded-lg bg-white h-min hover:shadow-cyan-400" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                  <div class="flex justify-center w-full">
+                    <img id="skills-img-1" class="w-[70%]" src="/assets/image/tailwind.png" alt="" />
+                  </div>
+                  <h2 class="text-center font-semibold text-black text-2xl pb-5">Tailwind CSS</h2>
+                </div>
+                <div class="card relative shadow-xl rounded-lg bg-white h-min hover:shadow-slate-700" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+                  <div class="flex justify-center w-full">
+                    <img id="skills-img-1" class="w-[70%]" src="/assets/image/github.png" alt="" />
+                  </div>
+                  <h2 class="text-center font-semibold text-black text-2xl pb-5">Github</h2>
+                </div>
+              </div>
+            </div>
+            <!-- End Skills -->
+            <!-- Experience -->
+            <div id="experience" class="container mx-auto px-10 mt-10">
+              <div class="education-section flex justify-center items-center">
+                <div class="education-content-1">
+                  <!-- Experience 1 -->
+                  <div class="education-data grid gap-6">
+                    <div class="bg-white shadow-xl p-5 shadow-sky-400 rounded-lg">
+                      <h2 class="education-title font-semibold text-lg">Front-End Engineering</h2>
+                      <h2 class="education-subtitle inline-block mb-1">Kampus Merdeka x Ruangguru (Independent Study)</h2>
+                      <p class="education-calender font-medium text-slate-400 mb-1">📆 August 2022 - Now</p>
+                      <ul class="font-light text-sm pl-5 list-disc">
+                        <li>Learn Git, and Github</li>
+                        <li>Learn HTML5, CSS3, adn Tailwind CSS</li>
+                        <li>Learn Thinking Skills, Project Management Tech, Communication and Presentation Skills</li>
+                      </ul>
+                    </div>
                     <div>
-                      <h2 class="text-center font-semibold text-black text-md mt-1">Skills</h2>
-                      <p class="px-3 font-light text-center">Dicoding Academy</p>
+                      <span class="education-rounder bg-sky-400"></span>
+                      <span class="education-line block w-[2px] h-full bg-sky-400"></span>
+                    </div>
+                  </div>
+                  <!-- Experience 2 -->
+                  <div class="education-data grid gap-6">
+                    <div></div>
+                    <div>
+                      <span class="education-rounder bg-sky-400"></span>
+                      <span class="education-line block w-[2px] h-full bg-sky-400"></span>
+                    </div>
+                    <div class="bg-white shadow-xl p-5 shadow-sky-400 rounded-lg">
+                      <h2 class="education-title font-semibold text-lg">Front-End Web Developer</h2>
+                      <h2 class="education-subtitle inline-block mb-1">IDCamp x Dicoding Academy (Online Course)</h2>
+                      <p class="education-calender font-medium text-slate-400 mb-1">📆 Mei 2022 - Now</p>
+                      <ul class="font-light text-sm pl-5 list-disc">
+                        <li>Learn HTML5, CSS3, JavaScript, Semantic HTML</li>
+                        <li>Learn Ajax, Node.Js</li>
+                        <li>Time Management</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Experience 3 -->
+                  <div class="education-data grid gap-6">
+                    <div class="bg-white shadow-xl p-5 shadow-sky-400 rounded-lg">
+                      <h2 class="education-title font-semibold text-lg">Electrical Maintenance Engineer</h2>
+                      <h2 class="education-subtitle inline-block mb-1">LG Service Center (Internship)</h2>
+                      <p class="education-calender font-medium text-slate-400 mb-1">📆 Feb 2019 - Apr 2019</p>
+                      <ul class="font-light text-sm pl-5 list-disc">
+                        <li>Repair Electronic Equiment (TV, Monitor, Washing Machine, Etc)</li>
+                        <li>Diagnose Problems That Exist In Electronic Devices</li>
+                        <li>Provide Service TO Consumerss</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <span class="education-rounder bg-sky-400"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Experience -->
+            <!-- Project -->
+            <div id="project" class="hidden container mx-auto px-10 mt-10">
+              <div id="project-content" class="grid grid-cols-2 gap-10">
+                <div class="card relative rounded-lg shadow-xl bg-white h-min overflow-hidden">
+                  <img id="project-img-1" class="w-full rounded-t-lg" src="/assets/image/Ontime.png" alt="" />
+                  <div id="project-title" class="absolute w-full h-full bottom-[-100%] left-0 bg-gradient-to-t from-sky-400 flex flex-wrap justify-center items-center duration-500 transition-all ease-in-out">
+                    <div>
+                      <h2 class="text-center font-semibold text-black text-md mt-1">Apk</h2>
+                      <p class="px-3 font-light text-center">Ontime App</p>
                       <div class="w-full flex justify-center">
-                        <a class="w-[50%] rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="#" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-eye mr-1"></i> View </a>
+                        <a class="w-20 rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center mr-2" href="https://github.com/syahrulakbar/ontime-app" target="_blank" rel="noopener noreferrer">
+                          <i class="fa-brands fa-github mr-1"></i> Code
+                        </a>
+                        <a class="w-20 rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="https://play.google.com/store/apps/details?id=com.catatanku.ontime" target="_blank" rel="noopener noreferrer">
+                          <i class="fa-solid fa-eye mr-1"></i> View
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="card relative rounded-lg shadow-xl bg-white h-min overflow-hidden">
-                  <img id="certificate-img-1" class="h-1/2 w-full rounded-t-lg" src="/assets/image/dicoding-1.png" alt="" />
-                  <div id="certificate-title" class="absolute w-full h-full bottom-[-100%] left-0 bg-gradient-to-t from-sky-400 flex flex-wrap justify-center items-center duration-500 transition-all ease-in-out">
+                  <img id="project-img-1" class="h-1/2 w-full rounded-t-lg" src="/assets/image/landing-page-1.png" alt="" />
+                  <div id="project-title" class="absolute w-full h-full bottom-[-100%] left-0 bg-gradient-to-t from-sky-400 flex flex-wrap justify-center items-center duration-500 transition-all ease-in-out">
                     <div>
-                      <h2 class="text-center font-semibold text-black text-md mt-1">Learn to Create Front-End Web for Beginners</h2>
-                      <p class="px-3 font-light text-center">Dicoding Academy</p>
+                      <h2 class="text-center font-semibold text-black text-md mt-1">Web</h2>
+                      <p class="px-3 font-light text-center">App Landing Page</p>
                       <div class="w-full flex justify-center">
-                        <a class="w-[50%] rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="#" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-eye mr-1"></i> View </a>
+                        <a class="w-20 rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center mr-2" href="https://github.com/syahrulakbar/applandingpage" target="_blank" rel="noopener noreferrer">
+                          <i class="fa-brands fa-github mr-1"></i> Code
+                        </a>
+                        <a class="w-20 rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="https://ontimeapp.netlify.app/" target="_blank" rel="noopener noreferrer">
+                          <i class="fa-solid fa-eye mr-1"></i> View
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="card relative rounded-lg shadow-xl bg-white h-min overflow-hidden">
-                  <img id="certificate-img-1" class="h-1/2 w-full rounded-t-lg" src="/assets/image/dicoding-1.png" alt="" />
-                  <div id="certificate-title" class="absolute w-full h-full bottom-[-100%] left-0 bg-gradient-to-t from-sky-400 flex flex-wrap justify-center items-center duration-500 transition-all ease-in-out">
+                  <img id="project-img-1" class="h-1/2 w-full rounded-t-lg" src="/assets/image/bookshelf-1.png" alt="" />
+                  <div id="project-title" class="absolute w-full h-full bottom-[-100%] left-0 bg-gradient-to-t from-sky-400 flex flex-wrap justify-center items-center duration-500 transition-all ease-in-out">
                     <div>
-                      <h2 class="text-center font-semibold text-black text-md mt-1">Learn SOLID Programming Principles</h2>
-                      <p class="px-3 font-light text-center">Dicoding Academy</p>
+                      <h2 class="text-center font-semibold text-black text-md mt-1">Web</h2>
+                      <p class="px-3 font-light text-center">Bookshelf</p>
                       <div class="w-full flex justify-center">
-                        <a class="w-[50%] rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="#" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-eye mr-1"></i> View </a>
+                        <a class="w-20 rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center mr-2" href="https://github.com/syahrulakbar/bookself-app" target="_blank" rel="noopener noreferrer">
+                          <i class="fa-brands fa-github mr-1"></i> Code
+                        </a>
+                        <a class="w-20 rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="https://bookshelf-apps-dicoding.netlify.app/" target="_blank" rel="noopener noreferrer">
+                          <i class="fa-solid fa-eye mr-1"></i> View
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="card relative rounded-lg shadow-xl bg-white h-min overflow-hidden">
-                  <img id="certificate-img-1" class="h-1/2 w-full rounded-t-lg" src="/assets/image/dicoding-1.png" alt="" />
-                  <div id="certificate-title" class="absolute w-full h-full bottom-[-100%] left-0 bg-gradient-to-t from-sky-400 flex flex-wrap justify-center items-center duration-500 transition-all ease-in-out">
+                  <img id="project-img-1" class="h-1/2 w-full rounded-t-lg" src="/assets/image/know-me-1.png" alt="" />
+                  <div id="project-title" class="absolute w-full h-full bottom-[-100%] left-0 bg-gradient-to-t from-sky-400 flex flex-wrap justify-center items-center duration-500 transition-all ease-in-out">
                     <div>
-                      <h2 class="text-center font-semibold text-black text-md mt-1">Getting Started Programming With C</h2>
-                      <p class="px-3 font-light text-center">Dicoding Academy</p>
+                      <h2 class="text-center font-semibold text-black text-md mt-1">Web</h2>
+                      <p class="px-3 font-light text-center">Personal Web</p>
                       <div class="w-full flex justify-center">
-                        <a class="w-[50%] rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="#" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-eye mr-1"></i> View </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card relative rounded-lg shadow-xl bg-white h-min overflow-hidden">
-                  <img id="certificate-img-1" class="h-1/2 w-full rounded-t-lg" src="/assets/image/dicoding-1.png" alt="" />
-                  <div id="certificate-title" class="absolute w-full h-full bottom-[-100%] left-0 bg-gradient-to-t from-sky-400 flex flex-wrap justify-center items-center duration-500 transition-all ease-in-out">
-                    <div>
-                      <h2 class="text-center font-semibold text-black text-md mt-1">Getting Started Programming With Java</h2>
-                      <p class="px-3 font-light text-center">Dicoding Academy</p>
-                      <div class="w-full flex justify-center">
-                        <a class="w-[50%] rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="#" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-eye mr-1"></i> View </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card relative rounded-lg shadow-xl bg-white h-min overflow-hidden">
-                  <img id="certificate-img-1" class="h-1/2 w-full rounded-t-lg" src="/assets/image/dicoding-1.png" alt="" />
-                  <div id="certificate-title" class="absolute w-full h-full bottom-[-100%] left-0 bg-gradient-to-t from-sky-400 flex flex-wrap justify-center items-center duration-500 transition-all ease-in-out">
-                    <div>
-                      <h2 class="text-center font-semibold text-black text-md mt-1">Learn Web Development Using the PHP Programing Language</h2>
-                      <p class="px-3 font-light text-center">Udemy</p>
-                      <div class="w-full flex justify-center">
-                        <a class="w-[50%] rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="#" target="_blank" rel="noopener noreferrer"> <i class="fa-solid fa-eye mr-1"></i> View </a>
+                        <a
+                          class="w-20 rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center mr-2"
+                          href="https://github.com/syahrulakbar/mochamad_syahrul_akbar-final_project"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <i class="fa-brands fa-github mr-1"></i> Code
+                        </a>
+                        <a class="w-20 rounded-full border-2 border-sky-500 flex justify-center flex-wrap items-center" href="https://fe2615811-final-course.netlify.app/" target="_blank" rel="noopener noreferrer">
+                          <i class="fa-solid fa-eye mr-1"></i> View
+                        </a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- End Skills -->
-            <!-- Experience -->
-            <div id="experience" class="container mx-auto px-10 mt-10"></div>
-            <!-- End Experience -->
-            <!-- Project -->
-            <div id="project" class="hidden container mx-auto px-10 mt-10"></div>
             <!-- End project -->
           </section>
         </div>
@@ -290,5 +404,8 @@
     </section>
     <footer></footer>
   </body>
-  <script src="/script.js"></script>
+  <script type="text/javascript" src="/assets/js/vanilla-tilt.min.js"></script>
+  <script src="/assets/js/particles.min.js"></script>
+  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/script.js"></script>
 </html>
