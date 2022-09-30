@@ -24,15 +24,26 @@
     />
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
-  <body>
+  <body class="body transition duration-150 ease-in-out">
     <section id="container-all" class="container flex mx-auto justify-center min-h-screen">
       <div id="container-content" class="container justify-center flex w-[80%] mx-auto">
         <div id="container-content-1" class="w-full m-10">
-          <div id="head-profile" class="flex w-full lg:grid-rows-1 relative">
-            <div id="particles-js" class="w-[100%] h-[100%] absolute top-0 left-0 -z-20"></div>
+          <div id="toogle-section" class="flex justify-end relative transition duration-150 ease-in-out">
+            <i class="fa-regular fa-sun pt-[2px] pr-1"></i>
+            <input type="checkbox" name="" id="dark-toogle" class="hidden absolute right-[5%]" />
+            <label for="dark-toogle">
+              <div id="toogle-bar" class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-200 p-1 transition duration-150 ease-in-out">
+                <div class="toogle-circle h-4 w-4 rounded-full bg-yellow-400 transition duration-300 ease-in-out"></div>
+              </div>
+            </label>
+            <i class="fa-solid fa-moon pt-[2px] pl-1"></i>
+          </div>
+          <div id="head-profile" class="transition duration-150 ease-in-out flex w-full lg:grid-rows-1 relative">
+            <div id="particles-js" class="transition duration-150 ease-in-out w-[100%] h-[100%] absolute top-0 left-0 -z-20"></div>
+            <div id="particles-dark" class="transition duration-150 ease-in-out w-[100%] h-[100%] absolute top-0 left-0 -z-20"></div>
             <div id="profile-image" class="w-[30%] mx-4">
               <div class="relative image-profile flex justify-end">
-                <img src="/assets/image/my-profile.png" alt="" srcset="" class="rounded-full w-[40%]" />
+                <img id="profile-picture" src="/assets/image/my-profile.png" alt="" srcset="" class="rounded-full w-[40%]" />
               </div>
             </div>
             <div id="profile-desc" class="w-[70%]">
@@ -54,7 +65,7 @@
                     <a
                       href="https://www.linkedin.com/in/mochamad-syahrul-akbar-904409225/"
                       target="_blank"
-                      class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-900 border-slate-300 hover:border-sky-400 hover:bg-sky-400 hover:text-white"
+                      class="linkedin w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-900 border-slate-300 hover:border-sky-400 hover:bg-sky-400 hover:text-white"
                       ><svg class="fill-current" width="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title>LinkedIn</title>
                         <path
@@ -63,7 +74,11 @@
                       </svg>
                     </a>
                     <!-- Email -->
-                    <a href="mailto:07tav2akbar@gmail.com" target="_blank" class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-900 border-slate-300 hover:border-sky-400 hover:bg-sky-400 hover:text-white">
+                    <a
+                      href="mailto:07tav2akbar@gmail.com"
+                      target="_blank"
+                      class="email w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-900 border-slate-300 hover:border-sky-400 hover:bg-sky-400 hover:text-white"
+                    >
                       <svg class="fill-current" width="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title>Gmail</title>
                         <path
@@ -72,7 +87,7 @@
                       </svg>
                     </a>
                     <!-- Whatsapp -->
-                    <a href="https://wa.me/+6281548962893" target="_blank" class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-900 border-slate-300 hover:border-sky-400 hover:bg-sky-400 hover:text-white"
+                    <a href="https://wa.me/+6281548962893" target="_blank" class="wa w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-900 border-slate-300 hover:border-sky-400 hover:bg-sky-400 hover:text-white"
                       ><svg class="fill-current" width="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title>WhatsApp</title>
                         <path
@@ -84,7 +99,7 @@
                     <a
                       href="https://www.instagram.com/sepatukuhitamkotor/"
                       target="_blank"
-                      class="w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-900 border-slate-300 hover:border-sky-400 hover:bg-sky-400 hover:text-white"
+                      class="instagram w-9 h-9 mr-3 rounded-full flex items-center justify-center border text-slate-900 border-slate-300 hover:border-sky-400 hover:bg-sky-400 hover:text-white"
                       ><svg class="fill-current" width="20" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title>Instagram</title>
                         <path
@@ -106,13 +121,13 @@
                   </div>
                 </div>
                 <h2 class="font-medium text-lg">About Me</h2>
-                <p class="font-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa deleniti quidem minus, exercitationem earum reiciendis ullam natus iure quibusdam!</p>
+                <p class="font-light">I am a student majoring in computer engineering, interested in the field of front end web developer who is very passionated about improving my coding skills.</p>
               </div>
             </div>
           </div>
           <section id="main-profile" class="">
             <div id="main-button" class="flex justify-center mt-10">
-              <div id="button-container" class="flex justify-center border-t w-[100%] border-slate-800">
+              <div id="button-container" class="transition duration-150 ease-in-out flex justify-center border-t w-[100%] border-slate-800">
                 <div id="button" class="flex w-full justify-center">
                   <button id="button-experience" class="mr-2 active border-slate-800 w-[20%]"><i class="mt-2 fa-solid fa-code"></i><span class="on">Experience</span></button>
                   <button id="button-project" class="mr-2 border-slate-800 w-[20%]"><i class="mt-2 fa-solid fa-laptop"></i><span class="on">My Project</span></button>
@@ -402,10 +417,18 @@
         </div>
       </div>
     </section>
-    <footer></footer>
+    <footer class="footer transition duration-150 ease-in-out">
+      <div id="arrow" class="flex w-[100%] justify-center items-center">
+        <div class="border-t w-[80%] border-slate-700 my-5"></div>
+      </div>
+      <div class="container mx-auto flex justify-center mb-3">
+        <p>Made with ❤️ by <a href="#" class="text-sky-400">Mochamad Syahrul Akbar</a></p>
+      </div>
+    </footer>
   </body>
   <script type="text/javascript" src="/assets/js/vanilla-tilt.min.js"></script>
   <script src="/assets/js/particles.min.js"></script>
   <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/app-dark.js"></script>
   <script src="/assets/js/script.js"></script>
 </html>

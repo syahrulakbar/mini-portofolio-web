@@ -28,9 +28,6 @@ div.card:hover > div#certificate-title {
   transition: 0.5s;
 }
 
-div.image-profile img {
-  animation: spin 5s linear 2;
-}
 div.image-profile div {
   background-color: #000;
   width: 40%;
@@ -71,6 +68,56 @@ div#button button i {
   display: none;
 }
 
+input#dark-toogle {
+  width: 40px;
+  height: 10px;
+}
+input#dark-toogle:checked ~ label div#toogle-bar {
+  background-color: #94a3b8;
+}
+input#dark-toogle:checked ~ label div.toogle-circle {
+  transform: translateX(12px);
+  background-color: #000;
+}
+
+/* Dark Mode */
+body.dark {
+  background-color: #0f172a;
+}
+div#head-profile.dark {
+  color: #f9fafb;
+}
+div#contact-logo.dark > a {
+  color: #f9fafb;
+}
+
+div#button-container.dark {
+  color: #f9fafb;
+  border-top-color: #fafafa;
+}
+
+div#button-container.dark > #button > button.active {
+  transition: 0.5s;
+  border-top: 1px solid #f5f5f5;
+}
+div#button-container.dark > #button > button:active,
+div#button-container.dark > #button > button:hover {
+  border-top-color: #f5f5f5;
+}
+
+div#toogle-section.dark > i.fa-sun {
+  color: white;
+}
+div#toogle-section.dark > i.fa-moon {
+  color: #f9fafb;
+}
+
+footer.dark,
+footer.dark > div#arrow > div {
+  color: #f9fafb;
+  border-top-color: white;
+}
+
 @media screen and (max-width: 1130px) {
   div#button button i {
     display: block;
@@ -101,9 +148,7 @@ div#button button i {
   div#profile-desc h2#status {
     text-align: center;
   }
-  div#profile-desc p {
-    text-align: justify;
-  }
+
   /* Button */
   span.on {
     display: none;
@@ -135,9 +180,7 @@ div#button button i {
   div#profile-desc h2#status {
     text-align: center;
   }
-  div#profile-desc p {
-    text-align: justify;
-  }
+
   /* Button */
   span.on {
     display: none;
