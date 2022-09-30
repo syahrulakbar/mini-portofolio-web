@@ -21,8 +21,8 @@ const profilePicture = document.querySelector("#profile-picture");
 profilePicture.addEventListener("click", function () {
   Swal.fire({
     imageUrl: "../assets/image/my-profile.png",
-    imageHeight: 500,
-    imageAlt: "A tall image",
+    imageHeight: 250,
+    imageAlt: "Profile Picture",
     showConfirmButton: false,
   });
 });
