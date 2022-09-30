@@ -226,3 +226,5 @@ footer.dark > div#arrow > div {
     width: 100%;
   }
 }
+@media screen and (max-width: 482px) {
+}
